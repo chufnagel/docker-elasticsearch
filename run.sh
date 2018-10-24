@@ -14,6 +14,11 @@ if [ -z "${NODE_NAME}" ]; then
     NODE_NAME="$(uuidgen)"
 fi
 
+# If a keystore is provided, copy it to the right location
+if [ ! -z "${ES_KEYSTORE}" ]; then
+  cp "${ES_KEYSTORE}" $BASE/config/
+fi
+
 # Create a temporary folder for Elasticsearch ourselves
 # ref: https://github.com/elastic/elasticsearch/pull/27659
 export ES_TMPDIR="$(mktemp -d -t elasticsearch.XXXXXXXX)"
