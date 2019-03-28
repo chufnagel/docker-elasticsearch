@@ -1,10 +1,11 @@
-FROM quay.io/pires/docker-jre:8u171_alpine_3.8.1
-MAINTAINER pjpires@gmail.com
+FROM docker.bulogics.com/docker-jre:8u191_alpine_3.9.0
+# FROM amazoncorretto:8u202
+MAINTAINER kellyc@stratisiot.com
 
 # Export HTTP & Transport
 EXPOSE 9200 9300
 
-ENV ES_VERSION 6.4.2
+ENV ES_VERSION 6.6.0
 
 ENV DOWNLOAD_URL "https://artifacts.elastic.co/downloads/elasticsearch"
 ENV ES_TARBAL "${DOWNLOAD_URL}/elasticsearch-${ES_VERSION}.tar.gz"

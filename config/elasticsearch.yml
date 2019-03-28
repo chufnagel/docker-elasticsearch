@@ -21,7 +21,6 @@ bootstrap:
   memory_lock: ${MEMORY_LOCK}
 
 http:
-  enabled: ${HTTP_ENABLE}
   compression: true
   cors:
     enabled: ${HTTP_CORS_ENABLE}
@@ -30,5 +29,3 @@ http:
 discovery:
   zen:
     minimum_master_nodes: ${NUMBER_OF_MASTERS}
-
-xpack.ml.enabled: false

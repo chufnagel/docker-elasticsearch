@@ -60,8 +60,8 @@ fi
 export NODE_NAME=${NODE_NAME}
 
 # remove x-pack-ml module
-rm -rf /elasticsearch/modules/x-pack/x-pack-ml
-rm -rf /elasticsearch/modules/x-pack-ml
+# rm -rf /elasticsearch/modules/x-pack/x-pack-ml
+# rm -rf /elasticsearch/modules/x-pack-ml
 
 # Run
 if [[ $(whoami) == "root" ]]; then
