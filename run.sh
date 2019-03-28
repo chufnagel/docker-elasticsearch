@@ -59,9 +59,11 @@ fi
 
 export NODE_NAME=${NODE_NAME}
 
-# remove x-pack-ml module
-# rm -rf /elasticsearch/modules/x-pack/x-pack-ml
-# rm -rf /elasticsearch/modules/x-pack-ml
+# remove x-pack-ml module due to errors 
+# https://github.com/pires/kubernetes-elasticsearch-cluster/issues/199
+# It's not compatible with alpine linux. It requires a real version of glibc
+rm -rf $BASE/modules/x-pack-ml
+
 
 # Run
 if [[ $(whoami) == "root" ]]; then
