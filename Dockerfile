@@ -1,4 +1,4 @@
-FROM docker.bulogics.com/docker-jre:8u201_alpine_3.9.2_02
+FROM docker.bulogics.com/docker-jre:zulu11.0.2_alpine_3.9.2_02
 # FROM amazoncorretto:8u202
 MAINTAINER kellyc@stratisiot.com
 
